@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    div.dice{
+        float: center;
+        width: 32px;
+        background: #000000;
+        border:999 1px solid;
+        padding: 10px;
+        font: size 24px;
+        color: #dddddd;
+        text-align: center;
+        margin:5px;
+    }
+
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: separate;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    </style>
+    
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <div id="die1" class="dice">0</div>
+                    <button onclick="rollDice4()">4 SIDED</button>
+                </th>
+                <th>
+                    <div id="die2" class="dice">0</div>
+                    <button onclick="rollDice6()">6 SIDED</button>
+                </th>
+                <th>
+                    <div id="die3" class="dice">0</div>
+                    <button onclick="rollDice8()">8 SIDED</button>
+                </th>
+                <th>
+                    <div id="die4" class="dice">0</div>
+                    <button onclick="rollDice10()">10 SIDED</button>
+                </th>
+                <th>
+                    <div id="die5" class="dice">0</div>
+                    <button onclick="rollDice12()">12 SIDED</button>
+                </th>
+                <th>
+                    <div id="die6" class="dice">0</div>
+                    <button onclick="rollDice20()">20 SIDED</button>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="roll()">ROLL</button>
+    <h2 id="status" style="clear: left;"></h2>
+    <script src="dice.js"></script>
+    <br>
+    <button onclick="reset()">RESET</button>
+    <br>
+    <br>
+    <table><!--TABLE DATA-->
+        <thead>
+            <tr>
+                <th></th>
+                <th>Round 1 </th>
+                <!-- <br> -->
+                <th>Round 2 </th>
+                <!-- <br> -->
+                <th>Round 3 </th>
+                <!-- <br> -->
+                <th>Round 4 </th>
+                <!-- <br> -->
+                <th>Round 5 </th>
+                <!-- <br> -->
+                <th>Round 6 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Player 1</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 2</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 3</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 4</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 5</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 6</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 7</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 8</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 9</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+            <tr>
+                <td>Player 10</td>
+                <td><textarea id="round1"></textarea></td>
+                <td><textarea id="round2"></textarea></td>
+                <td><textarea id="round3"></textarea></td>
+                <td><textarea id="round4"></textarea></td>
+                <td><textarea id="round5"></textarea></td>
+                <td><textarea id="round6"></textarea></td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+</body>
+</html>
